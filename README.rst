@@ -1,9 +1,9 @@
 
-======================
-Leonardo Sentry Module
-======================
+====================
+Leonardo Blog Module
+====================
 
-Provide end-user friendly 500 Error handler for Leonardo Sites
+FeinCMS ElephantBlog integration
 
 .. contents::
     :local:
@@ -13,30 +13,29 @@ Installation
 
 .. code-block:: bash
 
-    pip install leonardo_module_sentry
+    pip install leonardo_module_blog
 
 or as leonardo bundle
 
 .. code-block:: bash
 
-    pip install django-leonardo["sentry"]
+    pip install django-leonardo["blog"]
 
 Add ``leonardo_module_sentry`` to APPS list, in the ``local_settings.py``::
 
     APPS = [
     	...
-        'leonardo_module_sentry'
-    	...
+        'blog'
+        ...
     ]
+
+    of 
+
+    INSTALLED_APPS = ['leonardo_module_blog']
+        
 
 Load new template to db
 
 .. code-block:: bash
 
-	python manage.py sync_common
-
-Add ``RAVEN_CONFIG`` into your ``settings.py``::
-
-    RAVEN_CONFIG = {
-        'dsn': 'http://public:secret@example.com/1',
-    }
+	python manage.py sync_all
