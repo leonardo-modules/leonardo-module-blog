@@ -1,6 +1,5 @@
 
 from django.apps import AppConfig
-from django.utils.translation import ugettext_lazy as _
 
 from .widget import *
 
@@ -10,7 +9,7 @@ default_app_config = 'leonardo_module_blog.BlogConfig'
 
 class Default(object):
 
-    optgroup = _('Blog')
+    optgroup = ('Blog')
 
     @property
     def apps(self):
@@ -36,6 +35,6 @@ class Default(object):
 
 class BlogConfig(AppConfig, Default):
     name = 'leonardo_module_blog'
-    verbose_name = _("Blog")
+    verbose_name = ("Blog")
 
 default = Default()

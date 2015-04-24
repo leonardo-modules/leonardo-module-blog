@@ -14,10 +14,10 @@ class RecentBlogPostsWidget(Widget):
         default=True, verbose_name=_("show link button"))
 
     def get_last_posts(self):
-        return Entry.objects.filter(published__gt=40).order_by('-published_on')[:self.post_count]
+        return Entry.objects.all().order_by('-published_on')[:self.post_count]
 
     def get_all_posts(self):
-        return Entry.objects.filter(published__in=[50, 60]).order_by('-published_on')
+        return Entry.objects.filter(published_on__in=[50, 60]).order_by('-published_on')
 
     class Meta:
         abstract = True
