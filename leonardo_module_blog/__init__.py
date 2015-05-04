@@ -14,8 +14,8 @@ class Default(object):
     @property
     def apps(self):
         return [
-            'elephantblog',
             'leonardo_module_blog',
+            'elephantblog',
 
         ]
 
