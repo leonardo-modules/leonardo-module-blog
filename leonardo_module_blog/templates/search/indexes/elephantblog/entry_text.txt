@@ -1,0 +1,7 @@
+
+{{ object.url }}
+{{ onject.title }}
+{{ object.slug }}
+{{ object.author }}
+{{ object.content }}
+{{ object.last_changed }}
