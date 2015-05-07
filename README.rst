@@ -29,10 +29,6 @@ Add ``leonardo_module_sentry`` to APPS list, in the ``local_settings.py``::
         ...
     ]
 
-    of 
-
-    INSTALLED_APPS = ['leonardo_module_blog']
-        
 
 Load new template to db
 
