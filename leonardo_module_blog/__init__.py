@@ -4,7 +4,7 @@ from django.apps import AppConfig
 from .widget import *
 
 
-default_app_config = 'leonardo.module.blog.BlogConfig'
+default_app_config = 'leonardo_module_blog.BlogConfig'
 
 
 class Default(object):
@@ -14,7 +14,7 @@ class Default(object):
     @property
     def apps(self):
         return [
-            'leonardo.module.blog',
+            'leonardo_module_blog',
             'elephantblog',
 
         ]
@@ -34,7 +34,7 @@ class Default(object):
 
 
 class BlogConfig(AppConfig, Default):
-    name = 'leonardo.module.blog'
+    name = 'leonardo_module_blog'
     verbose_name = ("Blog")
 
 default = Default()
