@@ -1,15 +1,7 @@
-{% extends widget.parent.theme.template %}
 
 {% load feincms_tags i18n %}
 
-{% block body_main %}
-{% block content_title %}
-<h1>{% trans 'Blog posts' %} {% if year %}{% trans "for" %} {{ year|date:"Y"|default:year }}{% endif %}
-  {% if month %}{% trans "for" %} {{ month|date:"F Y"|default:month }}{% endif %}
-  {% if day %}{% trans "for" %} {{ day|date:"DATE_FORMAT"|default:day }}{% endif %}
-  {% if category %}{% trans "for" %} {{ category }}{% endif %}
-</h1>
-{% endblock %}
+{% block content %}
 
 {% block object_list %}
 <div class="hfeed newsfeed">

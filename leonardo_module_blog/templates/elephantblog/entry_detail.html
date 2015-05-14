@@ -1,9 +1,8 @@
-{% extends widget.parent.theme.template %}
 
 {% load feincms_tags i18n %}
 
 <!-- contains hAtom microformats proposed by http://www.readability.com/publishers/guidelines/ -->
-{% block body_main %}
+{% block content %}
 <article class="hentry">
     <header>
         <h1 class="entry-title">{{ entry }}</h1>
@@ -24,4 +23,4 @@
         {% feincms_render_region entry "main" request %}
     </div>
 </article>
-{% endblock body_main %}
+{% endblock %}
