@@ -29,7 +29,7 @@ class Default(object):
     @property
     def plugins(self):
         return [
-            ('elephantblog.urls', 'Blog'),
+            ('elephantblog.urls', 'Blog entries'),
         ]
 
 
