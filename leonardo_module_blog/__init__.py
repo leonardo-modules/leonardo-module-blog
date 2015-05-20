@@ -32,6 +32,12 @@ class Default(object):
             ('elephantblog.urls', 'Blog entries'),
         ]
 
+    navigation_extensions = [
+        'elephantblog.navigation_extensions.treeinfo',
+        'elephantblog.navigation_extensions.common',
+        'elephantblog.navigation_extensions.recursetree',
+    ]
+
 
 class BlogConfig(AppConfig, Default):
     name = 'leonardo_module_blog'
