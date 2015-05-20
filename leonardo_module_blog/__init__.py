@@ -1,5 +1,6 @@
 
 from django.apps import AppConfig
+from django.utils.translation import ugettext_lazy as _
 
 from .widget import *
 
@@ -31,6 +32,11 @@ class Default(object):
         return [
             ('elephantblog.urls', 'Blog entries'),
         ]
+
+    config = {
+        'BLOG_PAGINATE_BY': (10, _('Blog Entries Pagination')),
+
+    }
 
     navigation_extensions = [
         'elephantblog.navigation_extensions.treeinfo',
