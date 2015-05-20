@@ -22,5 +22,5 @@ try:
     from leonardo_oembed.widget import OembedWidget
     Entry.create_content_type(OembedWidget,
                               regions=('main',), optgroup=_('External content'))
-except Exception as e:
-    raise e
+except:
+    pass
