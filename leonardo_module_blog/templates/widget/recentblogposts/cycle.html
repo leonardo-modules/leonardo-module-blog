@@ -4,7 +4,7 @@
 
 {% block content %}
 <div class="cycle-container">
-	{% for object in widget.get_last_news %}
+	{% for object in entries %}
 	<div class="cycle-{{ forloop.counter }} news-item cycle-item">
 		<div class="news-text">
 			<h3><a href='{{ object.get_absolute_url }}'>{{ object.title }}</a></h3>

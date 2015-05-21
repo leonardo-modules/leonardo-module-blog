@@ -3,7 +3,7 @@
 {% load i18n feincms_tags %}
 
 {% block content %}
-{% for object in widget.get_last_posts %}
+{% for object in entries %}
 <div class="{% cycle 'odd' 'even' %} news_item">
 	<div class="object-list ui-helper-clearfix">
 		<div class="object-meta">{{ object.published_on|date:"j. m. Y" }}</div>

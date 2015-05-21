@@ -4,7 +4,7 @@
 
 {% block content %}
 {% with widget.news_count as count %}
-{% for object in widget.get_last_news %}
+{% for object in entries %}
 <div class="span-{% if count == 1 %}24{% endif %}{% if count == 2 %}12{% endif %}{% if count == 3 %}8{% endif %}{% if count == 4 %}6{% endif %}">
 	<div class="news-item">
 		<div class="news-text">
