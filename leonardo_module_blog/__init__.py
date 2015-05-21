@@ -44,6 +44,12 @@ class Default(object):
         'elephantblog.navigation_extensions.treeinfo',
     ]
 
+    absolute_url_overrides = {
+        'elephantblog.entry': 'leonardo_store.overrides.elephantblog_entry_url_app',
+        'elephantblog.categorytranslation':
+        'leonardo_store.overrides.elephantblog_categorytranslation_url_app',
+    }
+
 
 class BlogConfig(AppConfig, Default):
     name = 'leonardo_module_blog'
