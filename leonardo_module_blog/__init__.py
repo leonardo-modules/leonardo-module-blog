@@ -42,8 +42,6 @@ class Default(object):
 
     navigation_extensions = [
         'elephantblog.navigation_extensions.treeinfo',
-        'elephantblog.navigation_extensions.common',
-        'elephantblog.navigation_extensions.recursetree',
     ]
 
 
