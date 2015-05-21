@@ -35,6 +35,8 @@ class Default(object):
 
     config = {
         'BLOG_PAGINATE_BY': (10, _('Blog Entries Pagination')),
+        'DISQUS_COMMENTS': (False, _('Enable Disqus comments')),
+        'DISQUS_SHORTNAME': ('michaelkuty', _('Disqus shortname identificator.')),
 
     }
 
