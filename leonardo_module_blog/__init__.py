@@ -45,9 +45,9 @@ class Default(object):
     ]
 
     absolute_url_overrides = {
-        'elephantblog.entry': 'leonardo_store.overrides.elephantblog_entry_url_app',
+        'elephantblog.entry': 'leonardo_module_blog.overrides.elephantblog_entry_url_app',
         'elephantblog.categorytranslation':
-        'leonardo_store.overrides.elephantblog_categorytranslation_url_app',
+        'leonardo_module_blog.overrides.elephantblog_categorytranslation_url_app',
     }
 
 
