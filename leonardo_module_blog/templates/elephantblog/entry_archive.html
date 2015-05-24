@@ -23,7 +23,7 @@
         </header>
         <div class="entry-summary">
             {% if entry.first_image %}{{ entry.first_image.render }}{% endif %}
-            {% if entry.first_richtext %}{{ entry.first_richtext.render }}{% endif %}
+            {% feincms_render_region entry "preview" request %}
         </div>
     </article>
 {% endfor %}
