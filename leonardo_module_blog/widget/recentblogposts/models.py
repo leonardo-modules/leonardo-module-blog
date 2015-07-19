@@ -5,7 +5,7 @@ from django.template.loader import render_to_string
 from django.utils.translation import ugettext_lazy as _
 from django.utils.translation import get_language
 from elephantblog.models import Entry
-from leonardo.module.web.models import Widget
+from leonardo.module.web.models import ListWidget
 from elephantblog.utils import entry_list_lookup_related
 
 try:
@@ -15,7 +15,7 @@ except ImportError:
     from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 
-class RecentBlogPostsWidget(Widget):
+class RecentBlogPostsWidget(ListWidget):
     post_count = models.PositiveIntegerField(
         verbose_name=_("post count"), default=3)
     show_button = models.BooleanField(

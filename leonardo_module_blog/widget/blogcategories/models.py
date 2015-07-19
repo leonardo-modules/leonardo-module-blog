@@ -4,10 +4,10 @@ from django.db import models
 from django.template.loader import render_to_string
 from django.utils.translation import ugettext_lazy as _
 from elephantblog.models import Category
-from leonardo.module.web.models import Widget
+from leonardo.module.web.models import ListWidget
 
 
-class BlogCategoriesWidget(Widget):
+class BlogCategoriesWidget(ListWidget):
 
     def get_categories(self):
         return Category.objects.all()
