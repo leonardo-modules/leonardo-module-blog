@@ -3,8 +3,8 @@ from django.utils.translation import ugettext_lazy as _
 from elephantblog.models import Entry
 from leonardo.module import media, web
 
-Entry.register_extensions('feincms.module.extensions.datepublisher',
-                          'feincms.module.extensions.translations',
+Entry.register_extensions('leonardo.extensions.datepublisher',
+                          'leonardo.extensions.translations',
                           )
 
 REGIONS = ('preview', 'main',)
