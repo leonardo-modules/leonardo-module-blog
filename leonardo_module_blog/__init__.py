@@ -2,9 +2,6 @@
 from django.apps import AppConfig
 from django.utils.translation import ugettext_lazy as _
 
-from .widget import *
-
-
 default_app_config = 'leonardo_module_blog.BlogConfig'
 
 
@@ -23,8 +20,8 @@ class Default(object):
     @property
     def widgets(self):
         return [
-            BlogCategoriesWidget,
-            RecentBlogPostsWidget,
+            'leonardo_module_blog.models.BlogCategoriesWidget',
+            'leonardo_module_blog.models.RecentBlogPostsWidget',
         ]
 
     @property
