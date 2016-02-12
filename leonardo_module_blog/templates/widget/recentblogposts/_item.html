@@ -1,0 +1,8 @@
+{% load i18n feincms_tags %}
+
+<div class="object-meta">{{ item.published_on|date:"j. m. Y" }}</div>
+<div class="object-text">
+	<h3><a href='{{ item.get_absolute_url }}'>{{ item.title }}</a></h3>
+	{% feincms_render_region item "preview" request %}
+	<a href="{{ item.get_absolute_url }}" class="btn btn-default">{% trans "Read more" %}</a>
+</div>

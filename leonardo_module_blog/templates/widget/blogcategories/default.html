@@ -1,11 +1,6 @@
 {% extends widget.get_base_template %}
-
 {% load i18n thumbnail %}
 
 {% block content %}
-<ul>
-  {% for object in widget.get_categories %}
-  <li><a href="{{ object.get_absolute_url }}" title="{{ object }}">{{ object }}</a></li>
-  {% endfor %}
-</ul>
+{% include widget.get_list_template %}
 {% endblock %}

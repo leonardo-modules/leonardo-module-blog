@@ -9,7 +9,7 @@ from leonardo.module.web.models import ListWidget
 
 class BlogCategoriesWidget(ListWidget):
 
-    def get_categories(self):
+    def get_items(self):
         return Category.objects.all()
 
     class Meta:

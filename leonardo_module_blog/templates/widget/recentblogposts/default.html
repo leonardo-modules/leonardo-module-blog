@@ -1,17 +1,6 @@
 {% extends widget.get_base_template %}
-
-{% load i18n feincms_tags %}
+{% load i18n thumbnail %}
 
 {% block content %}
-{% for object in entries %}
-<div class="{% cycle 'odd' 'even' %} news_item">
-	<div class="object-list ui-helper-clearfix">
-		<div class="object-meta">{{ object.published_on|date:"j. m. Y" }}</div>
-		<div class="object-text">
-			<h3><a href='{{ object.get_absolute_url }}'>{{ object.title }}</a></h3>
-			{% feincms_render_region object "preview" request %}
-		</div>
-	</div>
-</div>
-{% endfor %}
+{% include widget.get_list_template %}
 {% endblock %}

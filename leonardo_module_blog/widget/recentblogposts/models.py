@@ -35,37 +35,40 @@ class RecentBlogPostsWidget(ListWidget):
     def get_all_posts(self):
         return Entry.objects.filter(published_on__in=[50, 60]).order_by('-published_on')
 
-    def render_content(self, options):
-        request = options.get('request')
-        context = {'widget': self, 'request': request}
+    def get_items(self):
+        return self.get_last_posts()
 
-        if self.featured_only:
-            entries = Entry.objects.featured()
-        else:
-            entries = Entry.objects.active()
+    # def render_content(self, options):
+    #     request = options.get('request')
+    #     context = {'widget': self, 'request': request}
 
-        if self.only_active_language:
-            entries = entries.filter(
-                language=get_language())
+    #     if self.featured_only:
+    #         entries = Entry.objects.featured()
+    #     else:
+    #         entries = Entry.objects.active()
 
-        entries = entries.transform(entry_list_lookup_related)
+    #     if self.only_active_language:
+    #         entries = entries.filter(
+    #             language=get_language())
 
-        if self.post_count:
-            paginator = Paginator(entries, self.post_count)
-            page = request.GET.get('page', 1)
-            try:
-                self.entries = paginator.page(page)
-            except PageNotAnInteger:
-                self.entries = paginator.page(1)
-            except EmptyPage:
-                self.entries = paginator.page(paginator.num_pages)
+    #     entries = entries.transform(entry_list_lookup_related)
 
-        else:
-            self.entries = entries
+    #     if self.post_count:
+    #         paginator = Paginator(entries, self.post_count)
+    #         page = request.GET.get('page', 1)
+    #         try:
+    #             self.entries = paginator.page(page)
+    #         except PageNotAnInteger:
+    #             self.entries = paginator.page(1)
+    #         except EmptyPage:
+    #             self.entries = paginator.page(paginator.num_pages)
 
-        context['entries'] = self.entries
+    #     else:
+    #         self.entries = entries
 
-        return render_to_string(self.get_template, context)
+    #     context['entries'] = self.entries
+
+    #     return render_to_string(self.get_template, context)
 
     class Meta:
         abstract = True
