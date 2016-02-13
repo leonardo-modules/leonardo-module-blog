@@ -1,5 +1,5 @@
 {% extends widget.get_base_template %}
-{% load applicationcontent_tags %}
+{% load leonardo_tags %}
 
 
 {% load leonardo_tags i18n %}
@@ -7,6 +7,7 @@
 <!-- contains hAtom microformats proposed by http://www.readability.com/publishers/guidelines/ -->
 {% block content %}
 {% fragment request "_page_title" %}{% block page_title %}{{ entry }}{% endblock %}{% endfragment %}
+{% fragment request "_head_title" %}{% block head_title %}{{ entry }}{% endblock %}{% endfragment %}
 <article class="hentry">
     <header>
         <h1 class="entry-title">{{ entry }}</h1>
