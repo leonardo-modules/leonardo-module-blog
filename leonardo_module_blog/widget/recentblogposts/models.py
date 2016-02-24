@@ -36,7 +36,16 @@ class RecentBlogPostsWidget(ListWidget):
         return Entry.objects.filter(published_on__in=[50, 60]).order_by('-published_on')
 
     def get_items(self):
-        return self.get_last_posts()
+        entries = Entry.objects.active().order_by('-published_on')
+        if self.featured_only:
+          entries = entries.filter(is_featured=True)
+        if self.only_active_language:
+          lang = self.parent.language
+          entries = entries.filter(language=lang)
+        if entries.count() > self.post_count:
+          return entries[:self.post_count]
+        else:
+          return entries
 
     # def render_content(self, options):
     #     request = options.get('request')
