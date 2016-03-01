@@ -32,6 +32,7 @@ class Default(object):
 
     config = {
         'BLOG_PAGINATE_BY': (10, _('Blog Entries Pagination')),
+        'BLOG_SHOW_NEXT_PREV': (True, _('Show next & prev under post detail')),
         'DISQUS_COMMENTS': (False, _('Enable Disqus comments')),
         'DISQUS_SHORTNAME': ('michaelkuty', _('Disqus shortname identificator.')),
 

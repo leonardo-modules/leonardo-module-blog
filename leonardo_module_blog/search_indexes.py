@@ -16,6 +16,8 @@ class EntryIndex(indexes.SearchIndex, indexes.Indexable):
     published_on = fields.DateTimeField(model_attr='published_on', null=True)
     last_changed = fields.DateTimeField(model_attr='last_changed', null=True)
 
+    content_auto = indexes.EdgeNgramField(model_attr='title')
+
     def should_update(self, instance, **kwargs):
         return instance.is_active()
 

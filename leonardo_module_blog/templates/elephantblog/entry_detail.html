@@ -1,5 +1,5 @@
 {% extends widget.get_base_template %}
-{% load leonardo_tags %}
+{% load leonardo_tags blogtags %}
 
 
 {% load leonardo_tags i18n %}
@@ -28,6 +28,16 @@
         {% feincms_render_region entry "main" request %}
         {% render_region_tools entry "main" request %}
     </div>
+    {% if request.LEONARDO_CONFIG.BLOG_SHOW_NEXT_PREV %}
+    <div class="entry-related">
+        {% get_prev as prev %}
+        {% get_next as next %}
+      <ul class="pager">
+        {% if prev %}<li class="previous"><a href="{{ prev.get_absolute_url }}">Previous</a></li>{% endif %}
+        {% if next %}<li class="next"><a href="{{ next.get_absolute_url }}">{% trans "Next" %} <span aria-hidden="true">&rarr;</span></a></li>{% endif %}
+      </ul>
+    </div>
+    {% endif %}
     {% if request.LEONARDO_CONFIG.DISQUS_COMMENTS %}
     {% include 'elephantblog/_disqus_comments.html' %}
     {% endif %}
