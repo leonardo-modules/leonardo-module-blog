@@ -24,6 +24,6 @@ def get_next(context, same_category=False):
     """
     next_entry = Entry.objects.filter(
         published_on__gte=context['object'].published_on
-    ).order_by('-published_on').exclude(pk=context['object'].pk).first()
+    ).order_by('-published_on').exclude(pk=context['object'].pk).last()
 
     return next_entry
