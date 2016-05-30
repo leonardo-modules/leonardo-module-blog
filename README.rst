@@ -35,3 +35,11 @@ Load new template to db
 .. code-block:: bash
 
 	python manage.py sync_all
+
+If you have the ``leonardo-sitestarter`` just run::
+
+	python manage.py load_demo_data
+
+or::
+
+	python manage.py load_demo_data --names leonardo_module_blog

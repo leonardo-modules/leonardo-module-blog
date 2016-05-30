@@ -1,0 +1,59 @@
+auth.User:
+  admin:
+    password: root
+    mail: root@admin.cz
+elephantblog.Entry:
+  Test:
+    title: Test
+    slug: test
+    author:
+      type: auth.User
+      pk: __first__
+    content:
+      main:
+        elephantblog.HtmlTextWidget:
+          attrs:
+            text: Hello world !
+            content_theme: default
+            base_theme: default
+          dimensions:
+            md: 2
+web.Page:
+  QuickStart:
+    title: Quickstart
+    slug: quickstart
+    override_url: /
+    featured: false
+    theme: bootstrap
+    in_navigation: true
+    active: true
+    color_scheme: Default
+    content:
+      col3:
+        web.HtmlTextWidget:
+          attrs:
+            label: Welcome in Leonardo CMS
+            text: Your blog is ready to edit, just a login and start edit your content !
+          dimensions:
+            md: 6
+        web.RecentBlogPostsWidget:
+          attrs:
+            label: Recent Blog Posts
+            post_count: 6
+          dimensions:
+            md: 6
+  Blog:
+    title: Blog
+    slug: blog
+    featured: false
+    theme: bootstrap
+    in_navigation: true
+    active: true
+    color_scheme: Default
+    parent: quickstart
+    content:
+      col3:
+        web.ApplicationWidget:
+          attrs:
+            urlconf_path: 'elephantblog.urls' 
+
