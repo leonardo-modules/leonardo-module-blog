@@ -33,7 +33,7 @@
         {% get_prev as prev %}
         {% get_next as next %}
       <ul class="pager">
-        {% if prev %}<li class="previous"><a href="{{ prev.get_absolute_url }}">Previous</a></li>{% endif %}
+        {% if prev %}<li class="previous"><a href="{{ prev.get_absolute_url }}">{% trans "Previous" %}</a></li>{% endif %}
         {% if next %}<li class="next"><a href="{{ next.get_absolute_url }}">{% trans "Next" %} <span aria-hidden="true">&rarr;</span></a></li>{% endif %}
       </ul>
     </div>
