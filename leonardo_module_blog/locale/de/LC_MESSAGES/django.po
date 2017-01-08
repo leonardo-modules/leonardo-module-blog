@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-01-30 11:30+0100\n"
+"POT-Creation-Date: 2017-01-08 01:44+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,80 +18,108 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
-#: templates/blog/entry_headlines.html:14
-#: templates/blog/entry_list_tagged.html:7
-msgid "By"
+#: __init__.py:34
+msgid "Blog Entries Pagination"
 msgstr ""
 
-#: templates/blog/entry_headlines.html:14
-#: templates/blog/entry_list_tagged.html:7
-msgid "Posted on"
+#: __init__.py:35
+msgid "Show next & prev under post detail"
 msgstr ""
 
-#: templates/blog/entry_headlines.html:15
-#: templates/blog/entry_list_tagged.html:8
-msgid "at"
+#: __init__.py:36
+msgid "Enable Disqus comments"
 msgstr ""
 
-#: templates/blog/entry_headlines.html:19
-#: templates/blog/widget_shortlist.html:20
-#: templates/blog/widget_shortlist.html:30
-msgid "more..."
+#: __init__.py:37
+msgid "Disqus shortname identificator."
 msgstr ""
 
-#: templates/blog/entry_headlines.html:31 templates/blog/entry_list.html:37
-#: templates/blog/widget_shortlist.html:43
-msgid "Page"
+#: models.py:18
+msgid "Preview content area"
 msgstr ""
 
-#: templates/blog/entry_headlines.html:31 templates/blog/entry_list.html:37
-#: templates/blog/widget_shortlist.html:43
-msgid "of"
+#: models.py:19
+msgid "Main content area"
 msgstr ""
 
-#: templates/blog/entry_headlines.html:35 templates/blog/entry_list.html:41
-#: templates/blog/widget_shortlist.html:47
-msgid "previous"
+#: models.py:29 models.py:31
+msgid "Text"
 msgstr ""
 
-#: templates/blog/entry_headlines.html:39 templates/blog/entry_list.html:45
-#: templates/blog/widget_shortlist.html:51
-msgid "next"
+#: models.py:36
+msgid "Media"
 msgstr ""
 
-#: templates/blog/entry_list.html:8
-msgid "Featured items"
+#: models.py:41
+msgid "External content"
 msgstr ""
 
-#: templates/blog/entry_list.html:31
-msgid "No entries found."
+#: templates/elephantblog/entry_archive.html:24
+#: templates/elephantblog/entry_detail.html:20
+msgid "by"
 msgstr ""
 
-#: templates/blog/entry_list_tagged.html:3
-msgid "tag"
+#: templates/elephantblog/entry_detail.html:36
+msgid "Previous"
 msgstr ""
 
-#: templates/blog/entry_list_tagged.html:18
-msgid "Related Tags"
+#: templates/elephantblog/entry_detail.html:37
+msgid "Next"
 msgstr ""
 
-#: templates/widget/recentblogposts/cycle.html:16
-#: templates/widget/recentblogposts/grid.html:15
-msgid "More"
+#: templates/widget/pagetitle/blog.html:9
+#: templates/widget/pagetitle/blog.html:23
+#: templates/widget/pagetitle/blog.html:36
+msgid "Blog posts"
 msgstr ""
 
-#: widget/blogcategories/models.py:18 widget/blogcategories/models.py:19
+#: templates/widget/pagetitle/blog.html:9
+#: templates/widget/pagetitle/blog.html:10
+#: templates/widget/pagetitle/blog.html:11
+#: templates/widget/pagetitle/blog.html:12
+#: templates/widget/pagetitle/blog.html:23
+#: templates/widget/pagetitle/blog.html:24
+#: templates/widget/pagetitle/blog.html:25
+#: templates/widget/pagetitle/blog.html:26
+#: templates/widget/pagetitle/blog.html:36
+#: templates/widget/pagetitle/blog.html:37
+#: templates/widget/pagetitle/blog.html:38
+#: templates/widget/pagetitle/blog.html:39
+msgid "for"
+msgstr ""
+
+#: templates/widget/recentblogposts/_item.html:7
+msgid "Read more"
+msgstr ""
+
+#: widget/blogcategories/models.py:17 widget/blogcategories/models.py:18
 msgid "blog categories"
 msgstr ""
 
-#: widget/recentblogposts/models.py:12
+#: widget/recentblogposts/models.py:20
 msgid "post count"
 msgstr ""
 
-#: widget/recentblogposts/models.py:13
+#: widget/recentblogposts/models.py:22
 msgid "show link button"
 msgstr ""
 
-#: widget/recentblogposts/models.py:23 widget/recentblogposts/models.py:24
+#: widget/recentblogposts/models.py:25
+msgid "featured only"
+msgstr ""
+
+#: widget/recentblogposts/models.py:26
+msgid "Only show articles marked as featured"
+msgstr ""
+
+#: widget/recentblogposts/models.py:29
+msgid "show only post with active language"
+msgstr ""
+
+#: widget/recentblogposts/models.py:30
+msgid "Only show articles written in active language"
+msgstr ""
+
+#: widget/recentblogposts/models.py:84 widget/recentblogposts/models.py:85
 msgid "recent blog posts"
 msgstr ""
