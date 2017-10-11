@@ -1,5 +1,6 @@
 
 from django import template
+from django.utils.translation import get_language
 from elephantblog.models import Entry
 
 register = template.Library()
@@ -11,7 +12,8 @@ def get_prev(context, same_category=False):
         other previous entry
     """
     prev_entry = Entry.objects.filter(
-        published_on__lte=context['object'].published_on
+        published_on__lte=context['object'].published_on,
+        language=get_language()
     ).order_by('-published_on').exclude(pk=context['object'].pk).first()
 
     return prev_entry
@@ -23,7 +25,8 @@ def get_next(context, same_category=False):
         other previous entry
     """
     next_entry = Entry.objects.filter(
-        published_on__gte=context['object'].published_on
+        published_on__gte=context['object'].published_on,
+        language=get_language()
     ).order_by('-published_on').exclude(pk=context['object'].pk).last()
 
     return next_entry
