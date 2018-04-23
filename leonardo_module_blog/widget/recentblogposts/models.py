@@ -4,7 +4,7 @@ from django.db import models
 from django.template.loader import render_to_string
 from django.utils.translation import ugettext_lazy as _
 from django.utils.translation import get_language
-from elephantblog.models import Entry
+from elephantblog.models import Entry, Category
 from leonardo.module.web.models import ListWidget
 from elephantblog.utils import entry_list_lookup_related
 
@@ -29,6 +29,8 @@ class RecentBlogPostsWidget(ListWidget):
         _('show only post with active language'), blank=True, default=False,
         help_text=_('Only show articles written in active language'))
 
+    category = models.ForeignKey(Category, verbose_name=_('Category'), blank=True, null=True)
+
     def get_last_posts(self):
         return Entry.objects.all().order_by('-published_on')[:self.post_count]
 
@@ -42,6 +44,8 @@ class RecentBlogPostsWidget(ListWidget):
         if self.only_active_language:
           lang = self.parent.language
           entries = entries.filter(language=lang)
+        if self.category is not None:
+          entries = entries.filter(categories=self.category)
         if entries.count() > self.post_count:
           return entries[:self.post_count]
         else:

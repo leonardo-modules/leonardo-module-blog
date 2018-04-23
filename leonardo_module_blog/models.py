@@ -7,7 +7,6 @@ from leonardo.module import media, web
 
 from .widget.blogcategories.models import BlogCategoriesWidget
 from .widget.recentblogposts.models import RecentBlogPostsWidget
-from .widget.categoryposts.models import CategoryPostsWidget
 
 Entry.register_extensions('leonardo.extensions.datepublisher',
                           'leonardo.extensions.translations',

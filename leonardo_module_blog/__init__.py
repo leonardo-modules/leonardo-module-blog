@@ -22,7 +22,6 @@ class Default(object):
         return [
             'leonardo_module_blog.models.BlogCategoriesWidget',
             'leonardo_module_blog.models.RecentBlogPostsWidget',
-            'leonardo_module_blog.models.CategoryPostsWidget',
         ]
 
     @property
